@@ -10,13 +10,18 @@ const socket = io();
 //All the event created by our sever is are store inside socket variab;e
 
 
-socket.on('countUpdated', (count) => {
- //The callback receive all functions/varriables pass to it by emit event
- console.log('The count has updated', count)
-});
+// socket.on('countUpdated', (count) => {
+//  //The callback receive all functions/varriables pass to it by emit event
+//  console.log('The count has updated', count)
+// });
 
-document.querySelector('#increment').addEventListener('click', () => {
- console.log('Click')
- socket.emit('increment')
+// document.querySelector('#increment').addEventListener('click', () => {
+//  console.log('Click')
+//  socket.emit('increment')
+// })
+
+socket.on('emma', (message) => {
+  console.log(message)
 })
+
 
